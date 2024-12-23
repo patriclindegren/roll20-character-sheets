@@ -1,0 +1,1077 @@
+<div class="sheet-flexbox-container">
+	<!-- FLEXBOX LEFT COLUMN -->
+	<div class="sheet-flexboxleft-container">
+
+		<!-- NAME, XP & INITIATIVE -->
+		<div class="sheet-name_xp_init-container">
+			<input type="text" id="sheet-adventurerName" name="attr_charName" placeholder="Harry Boo">
+			<input type="text" id="sheet-adventurerExperiencePoints" name="attr_charXP" pattern="\d{1,3}" placeholder="0">
+			<input type="hidden" name="attr_charXP_max" value="10000">
+			
+			<button type="action" class="sheet-initiativeDice" name="act_rollInitiative"></button>
+		</div>
+
+		<!-- OCCUPATION, AGE & GOLD -->
+		<div class="sheet-occupation_age_gold-container">
+			<input type="text" id="sheet-adventurerOccupation" name="attr_charOccupation" placeholder="Explorer">
+			
+			<input type="text" id="sheet-adventurerAge" name="attr_charAge" pattern="\d{1,3}" placeholder="0">
+			<input type="hidden" name="attr_charAge_max" value="2500">
+			
+			<input type="text" id="sheet-adventurerGold" name="attr_charGold" pattern="\d{1,3}" placeholder="0">
+			<input type="hidden" name="attr_charGold_max" value="50000">
+		</div>
+	</div>
+
+	<!-- FLEXBOX RIGHT COLUMN -->
+	<!-- HITPOINTS -->
+	<div class="sheet-hitpoints-container">
+		<!-- Current HP input field -->
+		<input type="text" id="sheet-hitpoints-currentHP" name="attr_HP" pattern="\d{1,2}" value="10">
+		<input type="hidden" name="attr_HP_min" value="0">
+		
+		<!-- Max HP input field -->
+		<input type="text" id="sheet-hitpoints-maxHP" name="attr_HP_max" pattern="\d{1,2}" value="10">
+		<input type="hidden" name="attr_HP_max_limitMin" value="0">
+		<input type="hidden" name="attr_HP_max_limitMax" value="40">
+	</div>
+</div>
+
+
+<!-- WEAPON & INSTRUMENT -->
+<div class="sheet-weapon_instrument-container">
+	<div class="sheet-weapon_instrument">
+		<!--div class="sheet-iconWeapon"></div-->
+		<input type="text" class="sheet-weapon_instrument_name-input" name="attr_weaponName" placeholder="Weapon">
+		<div class="sheet-weapon_instrument-line"></div>
+		<button type="action" class="sheet-weaponInstrumentDice" name="act_rollWeapon"></button>
+	</div>
+	
+	<div class="sheet-weapon_instrument">
+		<!--div class="sheet-iconInstrument"></div-->
+		<input type="text" class="sheet-weapon_instrument_name-input" name="attr_instrumentName" placeholder="Instrument">
+		<div class="sheet-weapon_instrument-line"></div>
+		<button type="action" class="sheet-weaponInstrumentDice" name="act_rollInstrument"></button>
+	</div>
+</div>
+
+<!-- SKILLS -->
+<div class="sheet-skills-container">
+	
+	<!-- PERCEPTION & ARC./ALCH. -->
+	<div class="sheet-skills-pair-container">
+		<!-- PERCEPTION -->
+		<div class="sheet-skill" id="skill-1"> 
+			<input type="text" class="sheet-skillNumDices-input" name="attr_Perception" value="0">
+			<input type="hidden" name="attr_Perception_max" value="5">
+			<div class="sheet-skill-line"></div>
+			<button type="action" class="sheet-skillDice" name="act_rollPerception"></button>
+			<div class="sheet-skill-line2"></div>
+			<button type="action" class="sheet-skillTool" name="act_rollPerceptionTool"></button>
+		</div>
+		
+		<!-- ARC./ALCH. -->
+		<div class="sheet-skill" id="skill-5">
+			<input type="text" class="sheet-skillNumDices-input" name="attr_Arc./Alch." value="0">
+			<input type="hidden" name="attr_Arc./Alch._max" value="5">
+			<div class="sheet-skill-line"></div>
+			<button type="action" class="sheet-skillDice" name="act_rollArc./Alch."></button>
+			<div class="sheet-skill-line2"></div>
+			<button type="action" class="sheet-skillTool" name="act_rollArc./Alch.Tool"></button>
+		</div>
+	</div>
+	
+	<!-- STRENGTH & SURVIVAL -->
+	<div class="sheet-skills-pair-container">
+		<!-- STRENGTH -->
+		<div class="sheet-skill" id="skill-2">
+			<input type="text" class="sheet-skillNumDices-input" name="attr_Strength" value="0">
+			<input type="hidden" name="attr_Strength_max" value="5">
+			<div class="sheet-skill-line"></div>
+			<button type="action" class="sheet-skillDice" name="act_rollStrength"></button>
+			<div class="sheet-skill-line2"></div>
+			<button type="action" class="sheet-skillTool" name="act_rollStrengthTool"></button>
+		</div>
+		
+		<!-- SURVIVAL -->
+		<div class="sheet-skill" id="skill-6">
+			<input type="text" class="sheet-skillNumDices-input" name="attr_Survival" value="0">
+			<input type="hidden" name="attr_Survival_max" value="5">
+			<div class="sheet-skill-line"></div>
+			<button type="action" class="sheet-skillDice" name="act_rollSurvival"></button>
+			<div class="sheet-skill-line2"></div>
+			<button type="action" class="sheet-skillTool" name="act_rollSurvivalTool"></button>
+		</div>
+	</div>
+	
+	<!-- ACROBATICS & MECHANICS -->
+	<div class="sheet-skills-pair-container">
+		<!-- ACROBATICS -->
+		<div class="sheet-skill" id="skill-3">
+			<input type="text" class="sheet-skillNumDices-input" name="attr_Acrobatics" value="0">
+			<input type="hidden" name="attr_Acrobatics_max" value="5">
+			<div class="sheet-skill-line"></div>
+			<button type="action" class="sheet-skillDice" name="act_rollAcrobatics"></button>
+			<div class="sheet-skill-line2"></div>
+			<button type="action" class="sheet-skillTool" name="act_rollAcrobaticsTool"></button>
+		</div>
+		
+		<!-- MECHANICS -->
+		<div class="sheet-skill" id="skill-7">
+			<input type="text" class="sheet-skillNumDices-input" name="attr_Mechanics" value="0">
+			<input type="hidden" name="attr_Mechanics_max" value="5">
+			<div class="sheet-skill-line"></div>
+			<button type="action" class="sheet-skillDice" name="act_rollMechanics"></button>
+			<div class="sheet-skill-line2"></div>
+			<button type="action" class="sheet-skillTool" name="act_rollMechanicsTool"></button>
+		</div>
+	</div>
+	
+	<!-- DEXTERITY & DEFENSE -->
+	<div class="sheet-skills-pair-container">
+		<!-- DEXTERITY -->
+		<div class="sheet-skill" id="skill-4">
+			<input type="text" class="sheet-skillNumDices-input" name="attr_Dexterity" value="0">
+			<input type="hidden" name="attr_Dexterity_max" value="5">
+			<div class="sheet-skill-line"></div>
+			<button type="action" class="sheet-skillDice" name="act_rollDexterity"></button>
+			<div class="sheet-skill-line2"></div>
+			<button type="action" class="sheet-skillTool" name="act_rollDexterityTool"></button>
+		</div>
+		
+		<!--DEFENSE-->
+		<div class="sheet-skill" id="skill-8">
+			<input type="text" class="sheet-skillNumDices-input" name="attr_Defense" value="0">
+			<input type="hidden" name="attr_Defense_max" value="5">
+			<div class="sheet-skill-line"></div>
+			<button type="action" class="sheet-skillDice" name="act_rollDefense"></button>
+			<div class="sheet-skill-line2"></div>
+			<button type="action" class="sheet-skillTool" name="act_rollDefenseTool"></button>
+		</div>
+	</div>
+</div>
+
+<!--ITEMS-->
+<div class="sheet-items-container">
+	<!--ITEM 1 & ITEM 2-->
+	<div class="sheet-items-pair-container">
+		<div class="sheet-item">
+			<input type="text" class="sheet-itemname-input" name="attr_item1Name" placeholder="item">
+		</div>
+		
+		<div class="sheet-item">
+			<input type="text" class="sheet-itemname-input" name="attr_item2Name" placeholder="item">
+		</div>
+	</div>
+	
+	<!--ITEM 3 & ITEM 4-->
+	<div class="sheet-items-pair-container">
+		<div class="sheet-item">
+			<input type="text" class="sheet-itemname-input" name="attr_item3Name" placeholder="item">
+		</div>
+		
+		<div class="sheet-item">
+			<input type="text" class="sheet-itemname-input" name="attr_item4Name" placeholder="item">
+		</div>
+	</div>
+	
+	<!--ITEM 5 & ITEM 6-->
+	<div class="sheet-items-pair-container">
+		<div class="sheet-item">
+			<input type="text" class="sheet-itemname-input" name="attr_item5Name" placeholder="item">
+		</div>
+		
+		<div class="sheet-item">
+			<input type="text" class="sheet-itemname-input" name="attr_item6Name" placeholder="item">
+		</div>
+	</div>
+</div>
+
+<!--NOTES-->
+<div class="sheet-notes-container">
+    <textarea class="sheet-notes-textarea" name="attr_charNotes" maxlength="165" placeholder="Enter your notes here..."></textarea>
+</div>
+
+<!--ROLLTEMPLATE: HIDDEN ROLLS-->
+<rolltemplate class="sheet-rolltemplate-hidden-singleroll">
+	{{#roll1}}
+	<div style="display: none;">
+		{{roll1}}
+	</div>
+	{{/roll1}}
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-hidden-doubleroll">
+	{{#roll1}}
+	<div style="display: none;">
+		{{roll1}}
+	</div>
+	{{/roll1}}
+	
+	{{#roll2}}
+	<div style="display: none;">
+		{{roll2}}
+	</div>
+	{{/roll2}}
+</rolltemplate>
+
+<!--ROLLTEMPLATE: INITIATIVE-->
+<rolltemplate class="sheet-rolltemplate-initiativeroll">
+    <div class="sheet-initiativeroll-title" style="background-color:{{titleColor}};">
+		<div class="sheet-initiativeroll-title-text">
+			{{title}}
+		</div>
+    </div>
+	
+	<div class="sheet-initiativeroll-container">
+		<div class="sheet-initiativeroll-body">
+			<!--Initiative Roll 1-->
+			{{#initiativeRoll0}}
+				<div class="sheet-initiativeroll-dicebox" style="background-color: {{initiativeRollColor0}}">
+					{{initiativeRoll0}}
+				</div>
+			{{/initiativeRoll0}}
+			
+			<!--Initiative Roll 2-->
+			{{#initiativeRoll1}}
+				<div class="sheet-initiativeroll-plus">+</div>
+				<div class="sheet-initiativeroll-dicebox" style="background-color: {{initiativeRollColor1}}">
+					{{initiativeRoll1}}
+				</div>
+			{{/initiativeRoll1}}
+			
+			<!--Initiative Roll 3-->
+			{{#initiativeRoll2}}
+				<div class="sheet-initiativeroll-plus">+</div>
+				<div class="sheet-initiativeroll-dicebox" style="background-color: {{initiativeRollColor2}}">
+					{{initiativeRoll2}}
+				</div>
+			{{/initiativeRoll2}}
+			
+			<!--Initiative Roll 4-->
+			{{#initiativeRoll3}}
+				<div class="sheet-initiativeroll-plus">+</div>
+				<div class="sheet-initiativeroll-dicebox" style="background-color: {{initiativeRollColor3}}">
+					{{initiativeRoll3}}
+				</div>
+			{{/initiativeRoll3}}
+			
+			<!--Initiative Roll 5-->
+			{{#initiativeRoll4}}
+				<div class="sheet-initiativeroll-plus">+</div>
+				<div class="sheet-initiativeroll-dicebox" style="background-color: {{initiativeRollColor4}}">
+					{{initiativeRoll4}}
+				</div>
+			{{/initiativeRoll4}}
+			
+			<!--Initiative Roll 6-->
+			{{#initiativeRoll5}}
+				<div class="sheet-initiativeroll-plus">+</div>
+				<div class="sheet-initiativeroll-dicebox" style="background-color: {{initiativeRollColor5}}">
+					{{initiativeRoll5}}
+				</div>
+			{{/initiativeRoll5}}
+			
+			<!--Initiative Roll 7-->
+			{{#initiativeRoll6}}
+				<div class="sheet-initiativeroll-plus">+</div>
+				<div class="sheet-initiativeroll-dicebox" style="background-color: {{initiativeRollColor6}}">
+					{{initiativeRoll6}}
+				</div>
+			{{/initiativeRoll6}}
+			
+			<!--Initiative Roll 8-->
+			{{#initiativeRoll7}}
+				<div class="sheet-initiativeroll-plus">+</div>
+				<div class="sheet-initiativeroll-dicebox" style="background-color: {{initiativeRollColor7}}">
+					{{initiativeRoll7}}
+				</div>
+			{{/initiativeRoll7}}
+			
+			<!--Initiative Roll 9-->
+			{{#initiativeRoll8}}
+				<div class="sheet-initiativeroll-plus">+</div>
+				<div class="sheet-initiativeroll-dicebox" style="background-color: {{initiativeRollColor8}}">
+					{{initiativeRoll8}}
+				</div>
+			{{/initiativeRoll8}}
+			
+			<!--Initiative Roll 10-->
+			{{#initiativeRoll9}}
+				<div class="sheet-initiativeroll-plus">+</div>
+				<div class="sheet-initiativeroll-dicebox" style="background-color: {{initiativeRollColor9}}">
+					{{initiativeRoll9}}
+				</div>
+			{{/initiativeRoll9}}
+		</div>
+    </div>
+	
+	<div class="sheet-initiativeroll-total" style="background-color:{{initiativeTotalResultColor}};">
+		<div class="sheet-initiativeroll-total-title">
+			Total
+		</div>
+		<div class="sheet-initiativeroll-total-result">
+			{{initiativetotalResult}}
+		</div>
+    </div>
+</rolltemplate>
+
+<!--ROLLTEMPLATE: WEAPON-->
+<rolltemplate class="sheet-rolltemplate-weaponroll">
+    <div class="sheet-weaponroll-title" style="background-color:{{titleColor}};">
+		<div class="sheet-weaponroll-title-text">
+			{{title}}
+		</div>
+    </div>
+	
+	<div class="sheet-weaponroll-container">
+		<div class="sheet-weaponroll-body">
+			<!--Attack Roll 1-->
+			{{#attackRoll0}}
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{attackRollColor0}}">
+					{{attackRoll0}}
+				</div>
+			{{/attackRoll0}}
+			
+			<!--Attack Roll 2-->
+			{{#attackRoll1}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{attackRollColor1}}">
+					{{attackRoll1}}
+				</div>
+			{{/attackRoll1}}
+			
+			<!--Attack Roll 3-->
+			{{#attackRoll2}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{attackRollColor2}}">
+					{{attackRoll2}}
+				</div>
+			{{/attackRoll2}}
+			
+			<!--Attack Roll 4-->
+			{{#attackRoll3}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{attackRollColor3}}">
+					{{attackRoll3}}
+				</div>
+			{{/attackRoll3}}
+			
+			<!--Attack Roll 5-->
+			{{#attackRoll4}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{attackRollColor4}}">
+					{{attackRoll4}}
+				</div>
+			{{/attackRoll4}}
+			
+			<!--Attack Roll 6-->
+			{{#attackRoll5}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{attackRollColor5}}">
+					{{attackRoll5}}
+				</div>
+			{{/attackRoll5}}
+			
+			<!--Attack Roll 7-->
+			{{#attackRoll6}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{attackRollColor6}}">
+					{{attackRoll6}}
+				</div>
+			{{/attackRoll6}}
+			
+			<!--Attack Roll 8-->
+			{{#attackRoll7}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{attackRollColor7}}">
+					{{attackRoll7}}
+				</div>
+			{{/attackRoll7}}
+			
+			<!--Attack Roll 9-->
+			{{#attackRoll8}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{attackRollColor8}}">
+					{{attackRoll8}}
+				</div>
+			{{/attackRoll8}}
+			
+			<!--Attack Roll 10-->
+			{{#attackRoll9}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{attackRollColor9}}">
+					{{attackRoll9}}
+				</div>
+			{{/attackRoll9}}
+		</div>
+    </div>
+	
+	<div class="sheet-weaponroll-description" style="background-color:{{attackDescriptionColor}};">
+		<div class="sheet-weaponroll-description-text">
+			{{attackDescriptionText}}
+		</div>
+    </div>
+	
+	<div class="sheet-weaponroll-container">
+		<div class="sheet-weaponroll-body">
+			<!--Damage Roll 1-->
+			{{#damageRoll0}}
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{damageRollColor0}}">
+					{{damageRoll0}}
+				</div>
+			{{/damageRoll0}}
+			
+			<!--Damage Roll 2-->
+			{{#damageRoll1}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{damageRollColor1}}">
+					{{damageRoll1}}
+				</div>
+			{{/damageRoll1}}
+			
+			<!--Damage Roll 3-->
+			{{#damageRoll2}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{damageRollColor2}}">
+					{{damageRoll2}}
+				</div>
+			{{/damageRoll2}}
+			
+			<!--Damage Roll 4-->
+			{{#damageRoll3}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{damageRollColor3}}">
+					{{damageRoll3}}
+				</div>
+			{{/damageRoll3}}
+			
+			<!--Damage Roll 5-->
+			{{#damageRoll4}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{damageRollColor4}}">
+					{{damageRoll4}}
+				</div>
+			{{/damageRoll4}}
+			
+			<!--Damage Roll 6-->
+			{{#damageRoll5}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{damageRollColor5}}">
+					{{damageRoll5}}
+				</div>
+			{{/damageRoll5}}
+			
+			<!--Damage Roll 7-->
+			{{#damageRoll6}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{damageRollColor6}}">
+					{{damageRoll6}}
+				</div>
+			{{/damageRoll6}}
+			
+			<!--Damage Roll 8-->
+			{{#damageRoll7}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{damageRollColor7}}">
+					{{damageRoll7}}
+				</div>
+			{{/damageRoll7}}
+			
+			<!--Damage Roll 9-->
+			{{#damageRoll8}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{damageRollColor8}}">
+					{{damageRoll8}}
+				</div>
+			{{/damageRoll8}}
+			
+			<!--Damage Roll 10-->
+			{{#damageRoll9}}
+				<div class="sheet-weaponroll-plus">+</div>
+				<div class="sheet-weaponroll-dicebox" style="background-color: {{damageRollColor9}}">
+					{{damageRoll9}}
+				</div>
+			{{/damageRoll9}}
+		</div>
+    </div>
+	
+	<div class="sheet-weaponroll-description" style="background-color:{{attackDescriptionColor}};">
+		<div class="sheet-weaponroll-description-text">
+			{{damageDescriptionText}}
+		</div>
+    </div>
+</rolltemplate>
+
+<!--ROLLTEMPLATE: INSTRUMENT-->
+<rolltemplate class="sheet-rolltemplate-instrumentroll">
+    <div class="sheet-instrumentroll-title" style="background-color:{{titleColor}};">
+		<div class="sheet-instrumentroll-title-text">
+			{{title}}
+		</div>
+    </div>
+	
+	<div class="sheet-instrumentroll-container">
+		<div class="sheet-instrumentroll-body">
+			<!--Instrument Roll 1-->
+			{{#instrumentRoll0}}
+				<div class="sheet-instrumentroll-dicebox" style="background-color: {{instrumentRollColor0}}">
+					{{instrumentRoll0}}
+				</div>
+			{{/instrumentRoll0}}
+			
+			<!--Instrument Roll 2-->
+			{{#instrumentRoll1}}
+				<div class="sheet-instrumentroll-plus">+</div>
+				<div class="sheet-instrumentroll-dicebox" style="background-color: {{instrumentRollColor1}}">
+					{{instrumentRoll1}}
+				</div>
+			{{/instrumentRoll1}}
+			
+			<!--Instrument Roll 3-->
+			{{#instrumentRoll2}}
+				<div class="sheet-instrumentroll-plus">+</div>
+				<div class="sheet-instrumentroll-dicebox" style="background-color: {{instrumentRollColor2}}">
+					{{instrumentRoll2}}
+				</div>
+			{{/instrumentRoll2}}
+			
+			<!--Instrument Roll 4-->
+			{{#instrumentRoll3}}
+				<div class="sheet-instrumentroll-plus">+</div>
+				<div class="sheet-instrumentroll-dicebox" style="background-color: {{instrumentRollColor3}}">
+					{{instrumentRoll3}}
+				</div>
+			{{/instrumentRoll3}}
+			
+			<!--Instrument Roll 5-->
+			{{#instrumentRoll4}}
+				<div class="sheet-instrumentroll-plus">+</div>
+				<div class="sheet-instrumentroll-dicebox" style="background-color: {{instrumentRollColor4}}">
+					{{instrumentRoll4}}
+				</div>
+			{{/instrumentRoll4}}
+			
+			<!--Instrument Roll 6-->
+			{{#instrumentRoll5}}
+				<div class="sheet-instrumentroll-plus">+</div>
+				<div class="sheet-instrumentroll-dicebox" style="background-color: {{instrumentRollColor5}}">
+					{{instrumentRoll5}}
+				</div>
+			{{/instrumentRoll5}}
+			
+			<!--Instrument Roll 7-->
+			{{#instrumentRoll6}}
+				<div class="sheet-instrumentroll-plus">+</div>
+				<div class="sheet-instrumentroll-dicebox" style="background-color: {{instrumentRollColor6}}">
+					{{instrumentRoll6}}
+				</div>
+			{{/instrumentRoll6}}
+			
+			<!--Instrument Roll 8-->
+			{{#instrumentRoll7}}
+				<div class="sheet-instrumentroll-plus">+</div>
+				<div class="sheet-instrumentroll-dicebox" style="background-color: {{instrumentRollColor7}}">
+					{{instrumentRoll7}}
+				</div>
+			{{/instrumentRoll7}}
+			
+			<!--Instrument Roll 9-->
+			{{#instrumentRoll8}}
+				<div class="sheet-instrumentroll-plus">+</div>
+				<div class="sheet-instrumentroll-dicebox" style="background-color: {{instrumentRollColor8}}">
+					{{instrumentRoll8}}
+				</div>
+			{{/instrumentRoll8}}
+			
+			<!--Instrument Roll 10-->
+			{{#instrumentRoll9}}
+				<div class="sheet-instrumentroll-plus">+</div>
+				<div class="sheet-instrumentroll-dicebox" style="background-color: {{instrumentRollColor9}}">
+					{{instrumentRoll9}}
+				</div>
+			{{/instrumentRoll9}}
+		</div>
+		
+		<div class="sheet-instrumentroll-text">
+			{{instrumentDescription}}
+		</div>
+    </div>
+</rolltemplate>
+
+<!--ROLLTEMPLATE: SKILL-->
+<rolltemplate class="sheet-rolltemplate-skillroll">
+    <div class="sheet-skillroll-title" style="background-color:{{titleColor}};">
+		<div class="sheet-skillroll-title-text">
+			{{title}}
+		</div>
+    </div>
+	
+	<div class="sheet-skillroll-container">
+		<div class="sheet-skillroll-body">
+			<!--Skill Roll 1-->
+			{{#skillRoll0}}
+				<div class="sheet-skillroll-dicebox" style="background-color: {{skillRollColor0}}">
+					{{skillRoll0}}
+				</div>
+			{{/skillRoll0}}
+			
+			<!--Skill Roll 2-->
+			{{#skillRoll1}}
+				<div class="sheet-skillroll-plus">+</div>
+				<div class="sheet-skillroll-dicebox" style="background-color: {{skillRollColor1}}">
+					{{skillRoll1}}
+				</div>
+			{{/skillRoll1}}
+			
+			<!--Skill Roll 3-->
+			{{#skillRoll2}}
+				<div class="sheet-skillroll-plus">+</div>
+				<div class="sheet-skillroll-dicebox" style="background-color: {{skillRollColor2}}">
+					{{skillRoll2}}
+				</div>
+			{{/skillRoll2}}
+			
+			<!--Skill Roll 4-->
+			{{#skillRoll3}}
+				<div class="sheet-skillroll-plus">+</div>
+				<div class="sheet-skillroll-dicebox" style="background-color: {{skillRollColor3}}">
+					{{skillRoll3}}
+				</div>
+			{{/skillRoll3}}
+			
+			<!--Skill Roll 5-->
+			{{#skillRoll4}}
+				<div class="sheet-skillroll-plus">+</div>
+				<div class="sheet-skillroll-dicebox" style="background-color: {{skillRollColor4}}">
+					{{skillRoll4}}
+				</div>
+			{{/skillRoll4}}
+			
+			<!--Skill Roll 6-->
+			{{#skillRoll5}}
+				<div class="sheet-skillroll-plus">+</div>
+				<div class="sheet-skillroll-dicebox" style="background-color: {{skillRollColor5}}">
+					{{skillRoll5}}
+				</div>
+			{{/skillRoll5}}
+			
+			<!--Skill Roll 7-->
+			{{#skillRoll6}}
+				<div class="sheet-skillroll-plus">+</div>
+				<div class="sheet-skillroll-dicebox" style="background-color: {{skillRollColor6}}">
+					{{skillRoll6}}
+				</div>
+			{{/skillRoll6}}
+			
+			<!--Skill Roll 8-->
+			{{#skillRoll7}}
+				<div class="sheet-skillroll-plus">+</div>
+				<div class="sheet-skillroll-dicebox" style="background-color: {{skillRollColor7}}">
+					{{skillRoll7}}
+				</div>
+			{{/skillRoll7}}
+			
+			<!--Skill Roll 9-->
+			{{#skillRoll8}}
+				<div class="sheet-skillroll-plus">+</div>
+				<div class="sheet-skillroll-dicebox" style="background-color: {{skillRollColor8}}">
+					{{skillRoll8}}
+				</div>
+			{{/skillRoll8}}
+			
+			<!--Skill Roll 10-->
+			{{#skillRoll9}}
+				<div class="sheet-skillroll-plus">+</div>
+				<div class="sheet-skillroll-dicebox" style="background-color: {{skillRollColor9}}">
+					{{skillRoll9}}
+				</div>
+			{{/skillRoll9}}
+		</div>
+    </div>
+	
+	<div class="sheet-skillroll-description" style="background-color:{{skillDescriptionColor}};">
+		<div class="sheet-skillroll-description-text">
+			{{skillDescriptionText}}
+		</div>
+    </div>
+</rolltemplate>
+
+<script type="text/worker">
+/***********/
+/***SHEET***/
+/***********/
+on("sheet:opened", function() {
+	validateAndUpdateHPInput();
+});
+
+/********************************/
+/***GENERIC FUNCTIONS & TABLES***/
+/********************************/
+function getSuccessfulRolls(rolls) {
+    // Filter the array to include only rolls 4, 5, and 6
+    return rolls.filter(roll => roll >= 4);
+}
+
+function getFailedRolls(rolls) {
+    // Filter the array to include only rolls 1, 2, and 3
+    return rolls.filter(roll => roll <= 3);
+}
+
+function determineRollOutcome(successfulRolls) {
+    return successfulRolls.length > 0 ? "SUCCESS" : "FAILURE";
+}
+
+function formatRollsWithPlus(rolls) {
+    // Use the join method to combine array elements with " + "
+    return rolls.join(" + ");
+}
+
+// Function to generate RollTemplate part string
+function buildRollTemplatePart(diceArray, action) {
+    let strRollTemplatePart = ""; // Initialize the result string
+
+    // Iterate over the dice array
+    for (let i = 0; i < diceArray.length; i++) {
+        const diceVal = diceArray[i]; // Current dice value
+        const diceColor = diceColorTable[diceVal.toString()]; // Look up color
+
+        // Generate the strings for this dice roll
+        let strRoll = `{{${action}Roll${i}=${diceVal}}}`;
+        let strColor = `{{${action}RollColor${i}=${diceColor}}}`;
+
+        // Append to the main string with a space in between
+        strRollTemplatePart += `${strRoll} ${strColor} `;
+    }
+
+    // Return the final constructed string
+    return strRollTemplatePart.trim(); // Trim to remove any trailing spaces
+}
+
+const resultColorTable = {
+    "SUCCESS": 	"#4BA22E",
+    "FAILURE":	"#A5A29E",
+};
+
+const diceColorTable = {
+    "6": 	"#4BA22E",
+    "5":	"#4BA22E",
+	"4": 	"#4BA22E",
+	"3":	"#A5A29E",	
+	"2":	"#A5A29E",
+	"1":	"#A5A29E"
+};
+
+/*********************************/
+/***CHARACTER STRING ATTRIBUTES***/
+/***NAME, OCCUPATION, WEAPON******/
+/***INSTRUMENT AND NOTES**********/
+/*********************************/
+const charNameXPAttr = ['charName', 'charOccupation', 'weaponName', 'instrumentName', 'charNotes'];
+charNameXPAttr.forEach(attr => {
+    on(`change:${attr} sheet:opened`, () => {	
+        getAttrs([attr], values => {			
+            let attrNew = values[attr];
+
+            setAttrs({
+                [`${attr}`]: attrNew 
+            });
+        });
+    });
+});
+
+/********************************/
+/***CHARACTER DIGIT ATTRIBUTES***/
+/***XP, AGE & GOLD***************/
+/********************************/
+const charOccupationAgeGoldAttr = ['charXP', 'charAge', 'charGold'];
+charOccupationAgeGoldAttr.forEach(attr => {
+    on(`change:${attr} sheet:opened`, () => {
+		// Determine the corresponding max attribute name
+		const maxAttr = `${attr}_Max`;
+		
+        getAttrs([attr, maxAttr], values => {			
+            let attrNew = values[attr];
+			const attrMax = values[maxAttr];
+			
+			// Remove any non-numeric characters
+			attrNew = attrNew.replace(/\D/g, '');
+
+			// Remove leading zeroes, allowing only a single leading zero
+			attrNew = attrNew.replace(/^0+(?=\d)/, '');
+			
+			// Convert the attribute and max value to integers for comparison
+            const currentValue = parseInt(attrNew, 10) || 0;
+            const maxValue = parseInt(attrMax, 10) || 0;
+
+            // Validate that the current value doesn't exceed the max value
+            if (currentValue > maxValue) {
+                attrNew = maxValue.toString();
+            }
+
+            setAttrs({
+                [`${attr}`]: attrNew 
+            });
+        });
+    });
+});
+
+/****************/
+/***HIT POINTS***/
+/****************/
+on("change:HP change:HP_max", function() {
+	validateAndUpdateHPInput();
+});
+
+function validateAndUpdateHPInput() {
+    getAttrs(["HP", "HP_max", "HP_max_limitMax"], function(values) {
+        let currentHP = String(values.HP || "0");
+        let maxHP = String(values.HP_max || "1");
+		let maxHP_limitMax = String(values.HP_max_limitMax || "1");
+
+        /// Truncate at the first dot or comma
+        currentHP = currentHP.replace(/[.,].*/, '');
+        maxHP = maxHP.replace(/[.,].*/, '');
+
+        // Remove non-numeric characters
+        currentHP = currentHP.replace(/^0+(\d)/, '$1').replace(/[^0-9]/g, '');
+        maxHP = maxHP.replace(/^0+(\d)/, '$1').replace(/[^0-9]/g, '');
+
+        // Convert sanitized strings to integers
+        currentHP = parseInt(currentHP, 10) || 0;
+        maxHP = parseInt(maxHP, 10) || 1;
+		maxHP_limitMax = parseInt(maxHP_limitMax, 10) || 40;
+		
+		// Ensure Max HP does not exceed max HP limit
+		if (maxHP > maxHP_limitMax) {
+			maxHP = maxHP_limitMax;
+		}
+
+        // Ensure current HP does not exceed max HP
+        if (currentHP > maxHP) {
+            currentHP = maxHP;
+        }
+
+        // Update the attributes with sanitized values
+        setAttrs({
+            HP: currentHP,
+            HP_max: maxHP
+        });
+    });
+}
+
+/****************/
+/***INITIATIVE***/
+/****************/
+on('clicked:rollInitiative', (info) => {
+    let initiativeDiceRoll = `&{template:hidden-singleroll} {{InitiativeRoll=[[3d6 &{tracker}]]}}`;
+        
+	startRoll(initiativeDiceRoll, (results) => {
+	
+		// TITLE HANDLING
+		let TitleColor = "#1D1B1A";
+		let InitiativeTitle = "Initiative";
+		
+		// INITIATIVE HANDLING
+		let InitiativeRollTemplate = buildInitiativeRollTemplatePart(results.results.InitiativeRoll.dice, "initiative");
+		
+		let TotalResultColor = resultColorTable["SUCCESS"];
+		let InitiativeTotalResult = results.results.InitiativeRoll.result;
+		
+		InitiativeRollTemplate += `{{initiativeTotalResultColor=${TotalResultColor}}} {{initiativetotalResult=${InitiativeTotalResult}}}`;
+
+		let rollSummary = `&{template:initiativeroll} {{titleColor=${TitleColor}}} {{title=${InitiativeTitle}}} ${InitiativeRollTemplate}`;
+		startRoll(rollSummary, (summaryResults) => {
+			finishRoll(summaryResults.rollId, {});
+		});
+
+		finishRoll(results.rollId, {});
+	});   
+});
+
+// Function to generate RollTemplate part string
+function buildInitiativeRollTemplatePart(diceArray, action) {
+    let strRollTemplatePart = ""; // Initialize the result string
+
+    // Iterate over the dice array
+    for (let i = 0; i < diceArray.length; i++) {
+        const diceVal = diceArray[i]; // Current dice value
+        const diceColor = resultColorTable["SUCCESS"]; // Look up color
+
+        // Generate the strings for this dice roll
+        let strRoll = `{{${action}Roll${i}=${diceVal}}}`;
+        let strColor = `{{${action}RollColor${i}=${diceColor}}}`;
+
+        // Append to the main string with a space in between
+        strRollTemplatePart += `${strRoll} ${strColor} `;
+    }
+
+    // Return the final constructed string
+    return strRollTemplatePart.trim(); // Trim to remove any trailing spaces
+}
+
+/************/
+/***WEAPON***/
+/************/
+on('clicked:rollWeapon', (info) => {
+    getAttrs(["weaponName", "Strength", "Dexterity"], function (values) {
+		let weaponName = values.weaponName
+        let strengthXP = values.Strength;
+		let dexterityXP = values.Dexterity;
+        
+        let diceRoll = `&{template:hidden-doubleroll} {{AttackRoll=[[${dexterityXP}d6 + 4d6]]}} {{DamageRoll=[[${strengthXP}d6 + 4d6]]}}`;
+        
+        startRoll(diceRoll, (results) => {
+		
+			// TITLE HANDLING
+			let TitleColor = "#1D1B1A";
+			let AttackTitle = "Attack, " + weaponName;
+			
+			// ATTACKROLL HANDLING
+			let AttackRollTemplate = buildRollTemplatePart(results.results.AttackRoll.dice, "attack");
+			
+			let AttackRollSuccesses = getSuccessfulRolls(results.results.AttackRoll.dice);
+			
+			let attackDescriptionColor = resultColorTable[determineRollOutcome(AttackRollSuccesses)];
+			let attackDescriptionText = AttackRollSuccesses.length + " successes";
+			
+			AttackRollTemplate += `{{attackDescriptionColor=${attackDescriptionColor}}} {{attackDescriptionText=${attackDescriptionText}}}`;
+			
+			// DAMAGEROLL HANDLING
+			let DamageRollTemplate = buildRollTemplatePart(results.results.DamageRoll.dice, "damage");
+			
+			let DamageRollSuccesses = getSuccessfulRolls(results.results.DamageRoll.dice);
+			let damageDescriptionColor = diceColorTable[determineRollOutcome(DamageRollSuccesses)];
+			let damageDescriptionText = DamageRollSuccesses.length + " damage";
+			
+			DamageRollTemplate += `{{damageDescriptionColor=${damageDescriptionColor}}} {{damageDescriptionText=${damageDescriptionText}}}`;
+		
+			let rollSummary = `&{template:weaponroll} {{titleColor=${TitleColor}}} {{title=${AttackTitle}}} ${AttackRollTemplate} ${DamageRollTemplate}`;
+			startRoll(rollSummary, (summaryResults) => {
+				finishRoll(summaryResults.rollId, {});
+			});
+
+			finishRoll(results.rollId, {});
+        });
+    });    
+});
+
+/****************/
+/***INSTRUMENT***/
+/****************/
+on('clicked:rollInstrument', (info) => {
+    getAttrs(["instrumentName"], function (values) {
+		let instrumentName = values.instrumentName
+        
+		let instrumentDiceRoll = `&{template:hidden-singleroll} {{InstrumentRoll=[[5d6]]}}`;
+        
+        startRoll(instrumentDiceRoll, (results) => {
+		
+			// TITLE HANDLING
+			let TitleColor = "#1D1B1A";
+			let InstrumentTitle = "Play music, " + instrumentName;
+			
+			// INSTRUMENTROLL HANDLING
+			let InstrumentRollTemplate = buildRollTemplatePart(results.results.InstrumentRoll.dice, "instrument");
+			let InstrumentRollSuccesses = getSuccessfulRolls(results.results.InstrumentRoll.dice);
+			
+			let instrumentDescription = "Re-roll twice (any amount of dice).";
+			
+			InstrumentRollTemplate += `{{instrumentDescription=${instrumentDescription}}}`;
+		
+			let rollSummary = `&{template:instrumentroll} {{titleColor=${TitleColor}}} {{title=${InstrumentTitle}}} ${InstrumentRollTemplate}`;
+            startRoll(rollSummary, (summaryResults) => {
+                finishRoll(summaryResults.rollId, {});
+            });
+			
+			finishRoll(results.rollId, {});
+        });
+    });    
+});
+
+/************/
+/***SKILLS***/
+/************/
+const skillAttr = ['Perception', 'Arc./Alch.', 'Strength', 'Survival', 'Acrobatics', 'Mechanics', 'Dexterity', 'Defense'];
+
+skillAttr.forEach(skill => {
+	on(`change:${skill} sheet:opened`, () => {	
+        getAttrs([skill, `${skill}_max`], values => {			
+            let skillNew = String(values[skill]);
+			let skillMax = values[`${skill}_max`];
+			
+			// Remove any non-numeric characters (except periods)
+			skillNew = skillNew.replace(/^0+(\d)/, '$1').replace(/[^0-9.]/g, '');
+			
+			// Ensure value does not exceed the maximum
+			if (skillNew > skillMax) {
+				skillNew = skillMax.toString();
+			}
+			
+			// Validate skill value
+			if (isNaN(skillNew) || skillNew < 0) {
+				skillNew = 0;
+			}
+			
+            setAttrs({
+                [`${skill}`]: skillNew 
+            });
+        });
+    });
+	
+    // Generic function to handle both button variants
+    const handleSkillRoll = (skillType) => {
+        getAttrs([skill], values => {
+            let skillpoints = parseInt(values[skill]);
+			
+			if (skillType === "Tool") {
+				skillpoints += 1;
+			}
+            
+            let diceRoll = `&{template:hidden-singleroll} {{SkillRoll=[[${skillpoints}d6 + 3d6]]}}`;
+            startRoll(diceRoll, (results) => {
+                
+                // TITLE HANDLING
+                let TitleColor = "#1D1B1A";
+                let SkillTitle = skill + (skillType === "Tool" ? " with tool" : ""); // Add "(Tool)" to title for tool rolls
+                
+                // SKILLROLL HANDLING
+                let SkillRollTemplate = buildRollTemplatePart(results.results.SkillRoll.dice, "skill");
+                
+                let SkillRollSuccesses = getSuccessfulRolls(results.results.SkillRoll.dice);
+                
+                let skillDescriptionColor = resultColorTable[determineRollOutcome(SkillRollSuccesses)];
+                let skillDescriptionText = SkillRollSuccesses.length + " successes";
+                
+                SkillRollTemplate += `{{skillDescriptionColor=${skillDescriptionColor}}} {{skillDescriptionText=${skillDescriptionText}}}`;
+                
+                let rollSummary = `&{template:skillroll} {{titleColor=${TitleColor}}} {{title=${SkillTitle}}} ${SkillRollTemplate}`;
+                startRoll(rollSummary, (summaryResults) => {
+                    finishRoll(summaryResults.rollId, {});
+                });
+
+                finishRoll(results.rollId, {});
+            });
+        });    
+    };
+
+    // Attach event handlers for both skill and skill tool rolls
+    on(`clicked:roll${skill}`, () => handleSkillRoll(""));
+    on(`clicked:roll${skill}Tool`, () => handleSkillRoll("Tool"));
+});
+
+/***********/
+/***ITEMS***/
+/***********/
+const itemNameAttr = ['item1Name','item2Name','item3Name','item4Name','item5Name', 'item6Name'];
+itemNameAttr.forEach(itemName => {
+    on(`change:${itemName} sheet:opened`, () => {
+        getAttrs([itemName], values => {
+            let itemNameNew = values[itemName];
+            setAttrs({
+                [`${itemName}`]: itemNameNew 
+            });
+        });
+    });
+});
+</script>

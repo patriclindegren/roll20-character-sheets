@@ -1,0 +1,789 @@
+:root {
+	/*DiceAssets*/
+	--ImageUrlDiceIconStatic: url('https://raw.githubusercontent.com/patriclindegren/SewerSanctuaryD6Images/refs/heads/main/Buttons/Dice_Static.png');
+	--ImageUrlDiceIconHover: url('https://raw.githubusercontent.com/patriclindegren/SewerSanctuaryD6Images/refs/heads/main/Buttons/Dice_Hover.png');
+	--ImageUrlDiceIconAction: url('https://raw.githubusercontent.com/patriclindegren/SewerSanctuaryD6Images/refs/heads/main/Buttons/Dice_Action.png');
+	
+	/*ToolAssets*/
+	--ImageUrlToolIconStatic: url('https://raw.githubusercontent.com/patriclindegren/SewerSanctuaryD6Images/refs/heads/main/Buttons/Tool_Static.png');
+	--ImageUrlToolIconHover: url('https://raw.githubusercontent.com/patriclindegren/SewerSanctuaryD6Images/refs/heads/main/Buttons/Tool_Hover.png');
+	--ImageUrlToolIconAction: url('https://raw.githubusercontent.com/patriclindegren/SewerSanctuaryD6Images/refs/heads/main/Buttons/Tool_Action.png');
+}
+
+.charsheet {
+	width: 394px;
+    height: 653px;
+
+    font-family: Calibri;
+    font-size: 12px;
+    background-image: url('https://raw.githubusercontent.com/patriclindegren/SewerSanctuaryD6Images/refs/heads/main/Background/Background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/***************************/
+/***FLEXBOX LAYOUT**********/
+/***FOR*********************/
+/***NAME, XP & INITIATIVE***/
+/***OCCUPATION, AGE & GOLD**/
+/***HITPOINTS***************/
+/***************************/
+.sheet-flexbox-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Left column: Stack name/xp/init and occupation/age/gold */
+.sheet-flexboxleft-container {
+    margin-top: 4px;
+    margin-left: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 302px;
+    box-sizing: border-box;
+}
+
+/***************************/
+/***NAME, XP & INITIATIVE***/
+/***************************/
+.sheet-name_xp_init-container {
+	margin-top: 27px;
+	width: 302px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+}
+
+#sheet-adventurerName {
+	margin-left: 5px;
+    width: 176px;
+    height: 32px;
+    font-family: Calibri;
+    font-size: 12px;
+    font-weight: 500;
+	font-style: normal;
+	color: #171917;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#sheet-adventurerName::placeholder {
+    font-style: italic;
+    color: #918F8F;
+}
+
+#sheet-adventurerExperiencePoints {
+    margin-left: 9px;
+    width: 52px;
+    height: 32px;
+    font-family: Calibri;
+    font-size: 12px;
+    font-weight: 500;
+	font-style: normal;
+	color: #171917;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#sheet-adventurerExperiencePoints::placeholder {
+    font-style: italic;
+    color: #918F8F;
+}
+
+.sheet-initiativeDice {
+	margin-top: 2px;
+	margin-left: 12px;
+	width: 24px;
+	height: 24px;
+	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-image: var(--ImageUrlDiceIconStatic);
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.sheet-initiativeDice:hover {
+	background-image: var(--ImageUrlDiceIconHover);
+}
+
+.sheet-initiativeDice:active {
+	background-image: var(--ImageUrlDiceIconAction);
+}
+
+/****************************/
+/***OCCUPATION, AGE & GOLD***/
+/****************************/
+.sheet-occupation_age_gold-container {
+  width: 302px;
+  height: 32px;
+}
+
+#sheet-adventurerOccupation {
+	margin-left: 5px;
+    width: 150px;
+    height: 32px;
+    font-family: Calibri;
+    font-size: 12px;
+    font-weight: 500;
+	font-style: normal;
+	color: #171917;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#sheet-adventurerOccupation::placeholder {
+    font-style: italic;
+    color: #918F8F;
+}
+
+#sheet-adventurerAge {
+    margin-left: 8px;
+    width: 52px;
+    height: 32px;
+    font-family: Calibri;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+	font-style: normal;
+	color: #171917;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#sheet-adventurerAge::placeholder {
+    font-style: italic;
+    color: #918F8F;
+}
+
+#sheet-adventurerGold {
+    margin-left: 7px;
+    width: 52px;
+    height: 32px;
+    font-family: Calibri;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+	font-style: normal;
+	color: #171917;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#sheet-adventurerGold::placeholder {
+    font-style: italic;
+    color: #918F8F;
+}
+
+/***************/
+/***HITPOINTS***/
+/***************/
+.sheet-hitpoints-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48px;
+    height: 96px;
+}
+
+#sheet-hitpoints-currentHP {
+	margin-top: 37px;
+	margin-left: -56px;
+    width: 48px;
+    height: 32px;
+    font-family: Calibri;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#sheet-hitpoints-maxHP {
+	margin-top: -3px;
+	margin-left: -56px;
+    width: 48px;
+    height: 32px;
+    font-family: Calibri;
+    font-size: 12px;
+    font-weight: 300;
+    color: #94918F;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+/*************************/
+/***WEAPON & INSTRUMENT***/
+/*************************/
+.sheet-weapon_instrument-container {
+	margin-top: 30px;
+	margin-left: 14px;
+	width: 380px;
+	height: 32px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 9px;
+}
+
+.sheet-weapon_instrument {
+	width: 171px;
+	height: 32px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.sheet-weapon_instrument_name-input {
+	margin-left: 25px;
+	width: 119px;
+	height: 32px;
+	font-family: Calibri;
+	font-size: 12px;
+	font-weight: 500;
+	font-style: normal;
+	color: #171917;
+	text-align: left;
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+.sheet-weapon_instrument_name-input::placeholder {
+    font-style: italic;
+    color: #918F8F;
+}
+
+.sheet-weapon_instrument-line
+{
+    margin-left: 128px;
+    width: 32px;
+    transform:rotate(-90deg);
+    border:0.7px solid #CEC7C2	;
+    position:absolute;
+}
+
+.sheet-weaponInstrumentDice {
+	margin-top: 1px;
+	margin-left: 4px;
+	width: 24px;
+	height: 24px;
+	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-image: var(--ImageUrlDiceIconStatic);
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.sheet-weaponInstrumentDice:hover {
+	background-image: var(--ImageUrlDiceIconHover);
+}
+
+.sheet-weaponInstrumentDice:active {
+	background-image: var(--ImageUrlDiceIconAction);
+}
+
+/************/
+/***SKILLS***/
+/************/
+.sheet-skills-container {
+    margin-top: 27px;
+    margin-left: 14px;
+    width: 356px;
+    display: flex;
+    flex-wrap: wrap;
+	column-gap: 8px;
+}
+
+.sheet-skills-pair-container {
+	margin-top: 4px;
+	margin-bottom: 1px;
+	width: 356px;
+	height: 32px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	box-sizing: border-box;
+	gap: 4px;
+}
+
+.sheet-skill {
+	margin-left: 87px;
+    width: 171px;
+    height: 32px;
+	flex-direction: row;
+    display: flex;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.sheet-skillNumDices-input {
+    width: 20px;
+    height: 32px;
+    font-family: Calibri;
+    font-size: 12px;
+    font-weight: 500;
+	font-style: normal;
+	color: #171917;
+    text-align: right;
+    background-color: transparent;
+    border: none;
+    outline: none;
+	box-sizing: border-box;
+}
+
+.sheet-skillNumDices-input::placeholder {
+    font-style: italic;
+    color: #918F8F;
+}
+
+.sheet-skill-line {
+	margin-top: 0px;
+    margin-left: 8px;
+    width: 33px;
+    transform: rotate(-90deg);
+    border: 0.7px solid #CEC7C2;
+    position: absolute;
+	box-sizing: border-box;
+}
+
+.sheet-skillDice {
+    margin-left: 8px;
+	width: 24px;
+	height: 24px;
+	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-image: var(--ImageUrlDiceIconStatic);
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.sheet-skillDice:hover {
+	background-image: var(--ImageUrlDiceIconHover);
+}
+
+.sheet-skillDice:active {
+	background-image: var(--ImageUrlDiceIconAction);
+}
+
+.sheet-skill-line2 {
+	margin-top: 0px;
+    margin-left: 41px;
+    width: 33px;
+    transform: rotate(-90deg);
+    border: 0.7px solid #CEC7C2;
+    position: absolute;
+	box-sizing: border-box;
+}
+
+.sheet-skillTool {
+    margin-left: 9px;
+	width: 24px;
+	height: 24px;
+	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-image: var(--ImageUrlToolIconStatic);
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.sheet-skillTool:hover {
+	background-image: var(--ImageUrlToolIconHover);
+}
+
+.sheet-skillTool:active {
+	background-image: var(--ImageUrlToolIconAction);
+}
+
+
+/***********/
+/***ITEMS***/
+/***********/
+.sheet-items-container {	
+	margin-top: 24px;
+    margin-left: 14px;
+    width: 372px;
+    display: flex;
+    flex-wrap: wrap;
+	column-gap: 8px;
+}
+
+.sheet-items-pair-container {
+	margin-top: 4px;
+	margin-bottom: 1px;
+	width: 356px;
+	height: 32px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	box-sizing: border-box;
+	gap: 4px;
+}
+
+.sheet-item {
+	margin-right: 6px;
+    width: 171px;
+    height: 32px;
+	flex-direction: row;
+    display: flex;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.sheet-itemname-input {
+	margin-left: 4px;
+    width: 168px;
+    font-family: Calibri;
+    font-size: 12px;
+    text-align: left;
+	font-style: normal;
+	color: #171917;
+    color: #89807B;
+    white-space: nowrap;
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+.sheet-itemname-input::placeholder {
+    font-style: italic;
+    color: #918F8F;
+}
+
+/***********/
+/***NOTES***/
+/***********/
+.sheet-notes-container {
+	margin-top: 30px;
+	margin-left: 14px;
+    width: 358px;
+    height: 54px;
+}
+
+.sheet-notes-textarea {
+    width: 332px;
+    height: 54px;
+    resize: none;
+    font-family: Calibri, sans-serif;
+    font-size: 12px;
+	font-style: normal;
+	color: #171917;
+    text-align: left;
+
+    color: #89807B;
+    background-color: transparent;
+	border: none;
+    outline: none;
+    padding: 6px 8px 8px 8px;
+    box-sizing: border-box;
+}
+
+.sheet-notes-textarea::placeholder {
+    font-style: italic;
+    color: #918F8F;
+}
+
+
+/*  ROLLTEMPLATES */
+
+/******************************/
+/***ROLLTEMPLATE: INITIATIVE***/
+/******************************/
+
+.sheet-rolltemplate-initiativeroll {
+	width: 100%;
+	display: flex;
+}
+
+.sheet-rolltemplate-initiativeroll .sheet-initiativeroll-title{
+	height:32px;
+	border:1px solid black;
+}
+
+.sheet-rolltemplate-initiativeroll .sheet-initiativeroll-title .sheet-initiativeroll-title-text {
+	margin-top: 8px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1.1em;
+	color: white;
+}
+
+.sheet-rolltemplate-initiativeroll .sheet-initiativeroll-container {
+	height: auto;
+	min-height:68px;
+	border:1px solid black;
+	padding: 3% 1% 3% 1%;
+	background-color: white;
+}
+
+.sheet-rolltemplate-initiativeroll .sheet-initiativeroll-container .sheet-initiativeroll-body {
+	margin-top: 18px;
+	display: flex;
+	gap: 4px;
+	justify-content: center;
+}
+
+.sheet-rolltemplate-initiativeroll .sheet-initiativeroll-container .sheet-initiativeroll-body .sheet-initiativeroll-dicebox {
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 8px;
+	text-align: center;
+	font-size: 1em;
+	color: White;
+}
+
+.sheet-rolltemplate-initiativeroll .sheet-initiativeroll-container .sheet-initiativeroll-body .sheet-initiativeroll-plus {
+	line-height: 32px;
+	text-align: center;
+	color: black;
+	font-size: 1em;
+}
+
+.sheet-rolltemplate-initiativeroll .sheet-initiativeroll-total {
+	height: 58px;
+	border: 1px solid black; 
+}
+
+.sheet-rolltemplate-initiativeroll .sheet-initiativeroll-total .sheet-initiativeroll-total-title {
+	margin-top: 10px;
+	text-align: center;
+	font-size: 1em;
+	font-weight: 500;
+	color: white;
+}
+
+.sheet-rolltemplate-initiativeroll .sheet-initiativeroll-total .sheet-initiativeroll-total-result {
+	margin-top: 4px;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 500;
+	color: white;
+}
+
+/**************************/
+/***ROLLTEMPLATE: WEAPON***/
+/**************************/
+.sheet-rolltemplate-weaponroll {
+	width: 100%;
+	display: flex;
+}
+
+.sheet-rolltemplate-weaponroll .sheet-weaponroll-title{
+	height:32px;
+	border:1px solid black;
+}
+
+.sheet-rolltemplate-weaponroll .sheet-weaponroll-title .sheet-weaponroll-title-text {
+	margin-top: 8px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1.1em;
+	color: white;
+}
+
+.sheet-rolltemplate-weaponroll .sheet-weaponroll-container {
+	height: auto;
+	min-height:68px;
+	border:1px solid black;
+	padding: 3% 1% 3% 1%;
+	background-color: white;
+}
+
+.sheet-rolltemplate-weaponroll .sheet-weaponroll-container .sheet-weaponroll-body {
+	margin-top: 18px;
+	display: flex;
+	gap: 4px;
+	justify-content: center;
+}
+
+.sheet-rolltemplate-weaponroll .sheet-weaponroll-container .sheet-weaponroll-body .sheet-weaponroll-dicebox {
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 8px;
+	text-align: center;
+	font-size: 1em;
+	color: White;
+}
+
+.sheet-rolltemplate-weaponroll .sheet-weaponroll-container .sheet-weaponroll-body .sheet-weaponroll-plus {
+	line-height: 32px;
+	text-align: center;
+	color: black;
+	font-size: 1em;
+}
+
+.sheet-rolltemplate-weaponroll .sheet-weaponroll-description {
+	height: 58px;
+	border: 1px solid black;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sheet-rolltemplate-weaponroll .sheet-weaponroll-description .sheet-weaponroll-description-text {
+	text-align: center;
+	font-size: 1.0em;
+	color: white;
+}
+
+/******************************/
+/***ROLLTEMPLATE: INSTRUMENT***/
+/******************************/
+.sheet-rolltemplate-instrumentroll {
+	width: 100%;
+	display: flex;
+}
+
+.sheet-rolltemplate-instrumentroll .sheet-instrumentroll-title{
+	height:32px;
+	border:1px solid black;
+}
+
+.sheet-rolltemplate-instrumentroll .sheet-instrumentroll-title .sheet-instrumentroll-title-text {
+	margin-top: 8px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1.1em;
+	color: white;
+}
+
+.sheet-rolltemplate-instrumentroll .sheet-instrumentroll-container {
+	height: auto;
+	min-height:68px;
+	border:1px solid black;
+	padding: 3% 1% 3% 1%;
+	background-color: white;
+}
+
+.sheet-rolltemplate-instrumentroll .sheet-instrumentroll-container .sheet-instrumentroll-body {
+	margin-top: 18px;
+	display: flex;
+	gap: 4px;
+	justify-content: center;
+}
+
+.sheet-rolltemplate-instrumentroll .sheet-instrumentroll-container .sheet-instrumentroll-body .sheet-instrumentroll-dicebox {
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 8px;
+	text-align: center;
+	font-size: 1em;
+	color: White;
+}
+
+.sheet-rolltemplate-instrumentroll .sheet-instrumentroll-container .sheet-instrumentroll-body .sheet-instrumentroll-plus {
+	line-height: 32px;
+	text-align: center;
+	color: black;
+	font-size: 1em;
+}
+
+.sheet-rolltemplate-instrumentroll .sheet-instrumentroll-container .sheet-instrumentroll-text {
+	margin-top: 22px;
+	text-align: center;
+	font-size: 0.7em;
+	color: #A59C99;
+}
+
+/**************************/
+/***ROLLTEMPLATE: SKILL***/
+/**************************/
+.sheet-rolltemplate-skillroll {
+	width: 100%;
+	display: flex;
+}
+
+.sheet-rolltemplate-skillroll .sheet-skillroll-title{
+	height:32px;
+	border:1px solid black;
+}
+
+.sheet-rolltemplate-skillroll .sheet-skillroll-title .sheet-skillroll-title-text {
+	margin-top: 8px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1.1em;
+	color: white;
+}
+
+.sheet-rolltemplate-skillroll .sheet-skillroll-container {
+	height: auto;
+	min-height:68px;
+	border:1px solid black;
+	padding: 3% 1% 3% 1%;
+	background-color: white;
+}
+
+.sheet-rolltemplate-skillroll .sheet-skillroll-container .sheet-skillroll-body {
+	margin-top: 18px;
+	display: flex;
+	gap: 4px;
+	justify-content: center;
+}
+
+.sheet-rolltemplate-skillroll .sheet-skillroll-container .sheet-skillroll-body .sheet-skillroll-dicebox {
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 8px;
+	text-align: center;
+	font-size: 1em;
+	color: White;
+}
+
+.sheet-rolltemplate-skillroll .sheet-skillroll-container .sheet-skillroll-body .sheet-skillroll-plus {
+	line-height: 32px;
+	text-align: center;
+	color: black;
+	font-size: 1em;
+}
+
+.sheet-rolltemplate-skillroll .sheet-skillroll-description {
+	height: 58px;
+	border: 1px solid black;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sheet-rolltemplate-skillroll .sheet-skillroll-description .sheet-skillroll-description-text {
+	margin-top: 2px;
+	text-align: center;
+	font-size: 1.0em;
+	color: white;
+}
